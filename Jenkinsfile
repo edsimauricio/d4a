@@ -13,12 +13,12 @@ pipeline{
 		}
 		stage('Build Docker'){
 			steps{
-			sudo docker build --tag=phpedsi ./home/backup/php54
+			sudo docker build --tag=phpedsi /home/backup/php54
 			}	
 		}
 		stage('Deploy Container'){
 			steps{
-			sudo docker run -p "80:80" --name phpedsi --rm -d php54
+			sudo docker run -p 80:80 --name phpedsi --rm -d php54
 			}
 		}
 	}
