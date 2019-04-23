@@ -18,7 +18,7 @@ pipeline{
 		}
 		stage('Deploy Container'){
 			steps{
-			sudo docker run -p 80:80 --name phpedsi --rm -d php54
+			sudo docker run -p "80:80" --name phpedsi --rm -d php54
 			}
 		}
 	}
